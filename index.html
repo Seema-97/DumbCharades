@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dumb Charades</title>
+
+    <script type="text/javascript">
+      function GuessMovie() {
+        let a;
+        while (a !== "black" || a !== "Black") {
+          a = prompt(
+            "Enter the movie name or type 'stop' if you want to cancel"
+          );
+          if (a === "black" || a === "Black") {
+            alert("Good Job..You Guessed it right");
+            break;
+          } else if (a === "stop") {
+            alert("You have canceled entering the name");
+            break;
+          } else {
+            alert("Try again");
+          }
+        }
+      }
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .button {
+        color: gray;
+        background-color: transparent;
+        border: none;
+        padding: 18px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        word-spacing: 2px;
+        border-radius: 25px;
+        border: 1px solid rgb(122, 67, 126);
+        box-shadow: 1px 1px 15px 10px rgb(122, 67, 126);
+        cursor: pointer;
+        margin-top: 100px;
+      }
+
+      .button:hover {
+        background-color: rgb(28, 28, 28);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      }
+
+      .movie {
+        display: flex;
+      }
+
+      .movie img {
+        width: 145px;
+        height: 145px;
+      }
+      a {
+        margin-top: 50px;
+        color: pink;
+        text-decoration: none;
+        box-shadow: 1px 1px 1px black;
+      }
+      a:hover {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="movie">
+        <img src="cloud-with-snow_1f328.png" alt="" />
+        <img src="woman-with-white-cane_1f469-200d-1f9af.png" alt="" />
+      </div>
+      <button onclick="GuessMovie()" class="button">Guess the film</button>
+
+      <a href="hint.html">click here for the hint</a>
+    </div>
+  </body>
+</html>
